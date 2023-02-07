@@ -1,22 +1,14 @@
-const mongoose = require("mongoose");
+const { MongoClient } = require("mongodb");
 
-const dbConnection = async () => {
-	try {
 
-    mongoose.connect(process.env.MONGODB_CNN, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-    })
-    console.log("DB Online");
-	} catch (error) {
+const client = new MongoClient(process.env.MONGODB_CNN);
+async function dbConnection() {
+    try {
+        await client.connect();
+        console.log("Connected correctly to server");
+    } catch (err) {
+        console.log(err.stack);
+    }
+}
 
-		throw new Error("Erorr a la hora de iniciar la BD");
-
-	}
-};
-
-module.exports = {
-	dbConnection,
-};
+module.exports = {dbConnection}
