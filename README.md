@@ -1,6 +1,6 @@
-# Plantilla para un servidor b'asico en express
+# Plantilla para un servidor básico en express
 
-En esta plantilla se utilizo una clase de JS para configurar el servidor de manera b'asica  esto en el archivo  [server](./models/server.js) y despues  se realiza la instancia y se levanta el servidor en el archivo principal app.js 
+En esta plantilla se utilizo una clase de JS para configurar el servidor de manera básica,  esto en el archivo  [server](./models/server.js) y despues  se realiza la instancia y se levanta el servidor en el archivo principal app.js 
 
 ---
 
